@@ -1,0 +1,32 @@
+{
+  "name": "webmcr/sdk-official-site",
+  "description": "PHP SDK for official site api",
+  "type": "project",
+  "license": "MIT",
+  "keywords": ["api", "sdk", "webmcr", "php", "qexy"],
+  "version": "1.0.0",
+  "homepage": "https://webmcr.ru/api/",
+  "authors": [
+    {
+      "name": "Qexy",
+      "email": "admin@qexy.org",
+      "homepage": "https://qexy.org"
+    },
+    {
+      "name": "WebMCR",
+      "email": "admin@webmcr.ru",
+      "homepage": "https://webmcr.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "webmcr\\sitesdk\\": "src/"
+    }
+  }
+}
