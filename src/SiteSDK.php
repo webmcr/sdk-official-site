@@ -7,10 +7,10 @@ namespace webmcr\sitesdk;
 class SiteSDK {
 
 
-    const VERSION = '1.0.0';
+    const VERSION = '1.1.0';
 
 
-    const API_URI = 'https://api.webmcr.ru';
+    public $API_URI = 'https://api.webmcr.ru';
 
 
     private $accessKeyInterface, $accessKeyNotifications;
@@ -142,7 +142,7 @@ class SiteSDK {
 
         $method = trim($method, '/');
 
-        $url = self::API_URI."/{$method}/";
+        $url = "{$this->API_URI}/{$method}/";
 
         if($signed){ $url .= $this->accessKeyInterface; }
 
