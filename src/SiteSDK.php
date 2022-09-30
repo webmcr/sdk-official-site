@@ -7,7 +7,7 @@ namespace webmcr\sitesdk;
 class SiteSDK {
 
 
-    const VERSION = '1.1.1';
+    const VERSION = '1.1.2';
 
 
     public $API_URI = 'https://api.webmcr.ru';
@@ -547,7 +547,7 @@ class SiteSDK {
      * @return array
      */
     public function metrics($type, $params) {
-        return $this->request("metrics/{$type}", $params, true);
+        return $this->request("metrics/{$type}", $params);
     }
 }
 
