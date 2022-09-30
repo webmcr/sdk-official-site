@@ -7,7 +7,7 @@ namespace webmcr\sitesdk;
 class SiteSDK {
 
 
-    const VERSION = '1.1.0';
+    const VERSION = '1.1.1';
 
 
     public $API_URI = 'https://api.webmcr.ru';
@@ -534,6 +534,20 @@ class SiteSDK {
         $params['id'] = $promo_id;
 
         return $this->request('promo/get', $params, true);
+    }
+
+
+    /**
+     * Send metrics
+     *
+     * @param string $type
+     *
+     * @param array $params
+     *
+     * @return array
+     */
+    public function metrics($type, $params) {
+        return $this->request("metrics/{$type}", $params, true);
     }
 }
 
